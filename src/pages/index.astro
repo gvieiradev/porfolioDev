@@ -1,11 +1,81 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Welcome from "../components/Welcome.astro";
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import Projects from "../components/Projects.astro";
+import LinkedInIcon from "../icons/Linkedin.astro";
+import GitHubIcon from "../icons/GitHub.astro";
+import MailIcon from "../icons/Mail.astro";
+import SocialPill from "../components/SocialPill.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import BriefCase from "../icons/BriefCase.astro";
+import CodeIcon from "../icons/Code.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout
+  description="Desarrollador web con 3 años de experiencia en la creación de aplicaciones eficientes y escalables. Especializado en tecnologías como JavaScript, HTML, CSS y frameworks modernos. Apasionado por la optimización del rendimiento, el diseño intuitivo y el desarrollo backend. Busco transformar ideas en soluciones digitales que marquen la diferencia"
+>
+  <main class="px-4">
+    <SectionContainer class="py-44 pb-32">
+      <img
+        class="rounded-full size-12 mb-4"
+        src="https://avatars.githubusercontent.com/u/1561955?v=4"
+        alt="photo"
+      />
+      <h1
+        class="text-white text-3xl lg:text-5xl md:text-4xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+      >
+        Hey, soy Gabriel <a
+          href="https://www.linkedin.com/in/gabrielvieirao"
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center items-center"
+        >
+          <Badge>Disponible para trabajar</Badge>
+        </a>
+      </h1>
+      <h2 class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[700px]">
+        <span class="text-yellow-200/90">Backend Developer</span> con 3 años de experiencia
+        en <span class="text-red-200/90">Madrid, España 🇪🇸</span>. Creando
+        soluciones escalables y optimizadas para aplicaciones digitales.
+      </h2>
+
+      <nav class="flex gap-4 mt-8 flex-wrap">
+        <SocialPill href="https://www.linkedin.com/in/gabrielvieirao">
+          <LinkedInIcon class="size-4 md:size-6" />
+          LinkedIn
+        </SocialPill>
+
+        <SocialPill href="https://www.github.com/gvieiradev">
+          <GitHubIcon class="size-4 md:size-6" />
+          GitHub
+        </SocialPill>
+
+        <SocialPill href="mailto:ing.gabrielvieira@gmail.com">
+          <MailIcon class="size-4 md:size-6" />
+          ing.gabrielvieira@gmail.com
+        </SocialPill>
+      </nav>
+    </SectionContainer>
+
+    <SectionContainer id="experiencia">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <BriefCase class="size-7" />
+        Experiencia laboral
+      </h2>
+      <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="proyectos">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <CodeIcon class="size-7" />
+        Proyectos
+      </h2>
+      <Projects />
+    </SectionContainer>
+  </main>
 </Layout>

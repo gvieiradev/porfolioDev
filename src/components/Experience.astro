@@ -1,0 +1,37 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCIE = [
+  {
+    date: "Octubre 2022 - Enero 2023",
+    title: "Tutor de Programación Backend",
+    company: "CoderHouse",
+    description:
+      "Colabore activamente con los profesores de los cursos para diseñar el plan de estudios y crear pruebas de práctica que beneficien a los estudiantes. Además de apoyar a los estudiantes durante su período académico.",
+  },
+  {
+    date: "Abril 2022 - Noviembre 2022",
+    title: "Desarrollador Web",
+    company: "OrinocoDev",
+    description:
+      "En mi rol como desarrollador backend en Orinoco.io, he estado a cargo del módulo de usuarios, una parte crítica de nuestra plataforma. Mi objetivo principal ha sido reducir la latencia en las operaciones entre los usuarios y la plataforma.",
+  },
+  {
+    date: "Agosto 2020 - Mayo 2021",
+    title: "Soporte Ténico de Hardware",
+    company: "Hello World",
+    description:
+      "Responsable de detectar fallos en equipos informáticos y proporcionar diagnósticos detallados. Además, he llevado a cabo tanto el mantenimiento preventivo como el correctivo del hardware ",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>
