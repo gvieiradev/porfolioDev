@@ -1,11 +1,9 @@
 ---
-import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
-import Badge from "../components/Badge.astro";
 import Projects from "../components/Projects.astro";
 import LinkedInIcon from "../icons/Linkedin.astro";
 import GitHubIcon from "../icons/GitHub.astro";
-import MailIcon from "../icons/Mail.astro";
+import CvIcon from "../icons/Cv.astro";
 import SocialPill from "../components/SocialPill.astro";
 import Experience from "../components/Experience.astro";
 import SectionContainer from "../components/SectionContainer.astro";
@@ -19,47 +17,56 @@ import CodeIcon from "../icons/Code.astro";
 <Layout
   description="Desarrollador web con 3 años de experiencia en la creación de aplicaciones eficientes y escalables. Especializado en tecnologías como JavaScript, HTML, CSS y frameworks modernos. Apasionado por la optimización del rendimiento, el diseño intuitivo y el desarrollo backend. Busco transformar ideas en soluciones digitales que marquen la diferencia"
 >
-  <main class="px-4">
-    <SectionContainer class="py-44 pb-32">
-      <img
-        class="rounded-full size-12 mb-4"
-        src="https://avatars.githubusercontent.com/u/1561955?v=4"
-        alt="photo"
-      />
-      <h1
-        class="text-white text-3xl lg:text-5xl md:text-4xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+  <main class="px-4 mt-24">
+    <SectionContainer class="py-36 pb-32">
+      <div
+        class="flex flex-col-reverse lg:flex-row items-center lg:items-start justify-between gap-6"
       >
-        Hey, soy Gabriel <a
-          href="https://www.linkedin.com/in/gabrielvieirao"
-          target="_blank"
-          rel="noopener"
-          class="flex justify-center items-center"
-        >
-          <Badge>Disponible para trabajar</Badge>
-        </a>
-      </h1>
-      <h2 class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[700px]">
-        <span class="text-yellow-200/90">Backend Developer</span> con 3 años de experiencia
-        en <span class="text-red-200/90">Madrid, España 🇪🇸</span>. Creando
-        soluciones escalables y optimizadas para aplicaciones digitales.
-      </h2>
+        <div>
+          <h1
+            class="text-white text-3xl lg:text-5xl md:text-4xl font-bold lg:pb-5"
+          >
+            Gabriel Alejandro Vieira Oliveira
+          </h1>
 
-      <nav class="flex gap-4 mt-8 flex-wrap">
-        <SocialPill href="https://www.linkedin.com/in/gabrielvieirao">
-          <LinkedInIcon class="size-4 md:size-6" />
-          LinkedIn
-        </SocialPill>
+          <p
+            class="text-yellow-200/90 text-2xl lg:text-2xl opacity-80 text-wrap max-w-[700px] pb-5"
+          >
+            Ingeniero en Informática | Desarrollador Web
+          </p>
 
-        <SocialPill href="https://www.github.com/gvieiradev">
-          <GitHubIcon class="size-4 md:size-6" />
-          GitHub
-        </SocialPill>
+          <p class="text-base lg:text-base opacity-80 max-w-[700px]">
+            Enfocado en aplicar metodologías efectivas y herramientas
+            actualizadas para lograr resultados sostenibles y escalables.
+          </p>
 
-        <SocialPill href="mailto:ing.gabrielvieira@gmail.com">
-          <MailIcon class="size-4 md:size-6" />
-          ing.gabrielvieira@gmail.com
-        </SocialPill>
-      </nav>
+          <nav class="flex gap-4 mt-8 flex-wrap">
+            <SocialPill href="https://www.linkedin.com/in/gabrielvieirao">
+              <LinkedInIcon class="size-4 md:size-6" />
+              LinkedIn
+            </SocialPill>
+
+            <SocialPill href="https://www.github.com/gvieiradev">
+              <GitHubIcon class="size-4 md:size-6" />
+              GitHub
+            </SocialPill>
+
+            <SocialPill
+              href="/Cv/Cv-Gabriel.pdf"
+              download="Curriculum-Gabriel-Vieira.pdf"
+            >
+              <CvIcon class="size-4 md:size-6" />
+              Currículum vitae
+            </SocialPill>
+          </nav>
+        </div>
+
+        <img
+          class="rounded-full w-52 h-52 shadow-lg"
+          src="https://tabler.io/_next/image?url=%2Favatars%2Fdefault%2F386f22acf2f226c3a9ad7ad66fdce7a6.png&w=280&q=75"
+          alt="Gabriel Vieira"
+        />
+      </div>
     </SectionContainer>
 
     <SectionContainer id="experiencia">

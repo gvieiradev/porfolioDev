@@ -3,13 +3,47 @@ import "../styles/global.css";
 ---
 
 <header
-  class="flex justify-center items-center py-5 w-full xl:w-[1120px] mx-auto"
+  id="main-header"
+  class="fixed top-0 w-full z-50 transition-all duration-300 bg-transparent"
 >
-  <nav class="flex flex-row gap-x-10 opacity-80">
-    <a href="#top">Inicio</a>
-    <a href="#experiencia">Experiencia</a>
-    <a href="#proyectos">Proyectos</a>
-    <a href="#sobre-mi">Sobre mí</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
+  <div class="flex justify-center items-center py-5 xl:w-[1120px] mx-auto">
+    <nav class="flex flex-row gap-x-10 opacity-80">
+      <a href="#top">Inicio</a>
+      <a href="#experiencia">Experiencia</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
 </header>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const header = document.getElementById("main-header");
+    if (!header) return;
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 10) {
+        header.classList.add(
+          "bg-black/20",
+          "backdrop-blur-md",
+          "border-b",
+          "border-gray-500",
+          "border-opacity-40",
+          "shadow-sm"
+        );
+        header.classList.remove("bg-transparent");
+      } else {
+        header.classList.remove(
+          "bg-black/20",
+          "backdrop-blur-md",
+          "border-b",
+          "border-gray-500",
+          "border-opacity-40",
+          "shadow-sm"
+        );
+        header.classList.add("bg-transparent");
+      }
+    });
+  });
+</script>
